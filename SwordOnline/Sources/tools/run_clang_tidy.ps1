@@ -8,6 +8,6 @@ Remove-Item -ErrorAction Ignore clang-tidy-full.log
 $files = Get-ChildItem -Recurse -Filter *.cpp
 foreach ($f in $files) {
   Write-Output "Running: $($f.FullName)"
-  & $clang -p . -fix -checks=$checks -- "$($f.FullName)" 2>&1 | Out-File -Append clang-tidy-full.log
+  & $clang -p . -fix -fix-errors -checks=$checks -- "$($f.FullName)" 2>&1 | Out-File -Append clang-tidy-full.log
 }
 Write-Output "Done. See clang-tidy-full.log for details."
