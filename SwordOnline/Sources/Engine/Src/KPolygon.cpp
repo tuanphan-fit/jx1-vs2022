@@ -26,7 +26,7 @@ BOOL KPolygon::IsPointInPolygon(POINT pos)
 	BOOL			bRet = TRUE;
 	int				nFlag[2];
 	int				nResult;
-	register int	i;
+	int	i;
 
 	for (i = 0; i < m_Polygon.nVertex; i++)
 	{
@@ -61,7 +61,7 @@ BOOL KPolygon::IsPointInPolygon(int x, int y)
 	BOOL			bRet = TRUE;
 	int				nFlag[2];
 	int				nResult;
-	register int	i;
+	int	i;
 	
 	for (i = 0; i < m_Polygon.nVertex; i++)
 	{

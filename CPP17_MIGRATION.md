@@ -124,6 +124,18 @@ Most C++14 code is compatible with C++17. However, some deprecated features may 
 - `std::random_shuffle` (deprecated, use `std::shuffle`)
 - `std::bind1st`/`std::bind2nd` (deprecated, use lambdas or `std::bind`)
 
+### Changes Made for C++17 Compatibility
+The following code changes were made to ensure C++17 compatibility:
+- **Removed `register` keyword**: The `register` keyword was removed in C++17. All 21 instances across 8 files have been removed:
+  - Core/Src/KNpcAI.cpp (1 instance)
+  - S3Client/Ui/Elem/UiImage.cpp (1 instance)
+  - Engine/Src/ucl/ucl_util.h (1 instance)
+  - Engine/Src/KPolygon.cpp (2 instances)
+  - Engine/Src/Text.cpp (2 instances)
+  - Engine/Src/KCodecLzo.cpp (5 instances)
+  - Engine/Src/Regexp.cpp (1 instance)
+  - Engine/Src/KStrBase.cpp (5 instances)
+
 ## Migration Date
 November 23, 2025
 

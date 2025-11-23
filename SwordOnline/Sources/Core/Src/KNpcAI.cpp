@@ -569,7 +569,7 @@ int KNpcAI::ShowNpcType16()
 	int nRetCode = false;
 
 	// Go the distance between P1 to P2
-	register int nDistance = 0;
+	int nDistance = 0;
 	int nDesX = 0;
 	int nDesY = 0;
 	int nCurX = 0;
