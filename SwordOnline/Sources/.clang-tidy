@@ -1,0 +1,4 @@
+Checks: '-*,modernize-use-nullptr,modernize-loop-convert,modernize-pass-by-value,modernize-make-unique'
+HeaderFilterRegex: '.*'
+WarningsAsErrors: ''
+FormatStyle: none
