@@ -3,6 +3,7 @@
 - ⚡ Sửa đổi:
     * Mở rộng màn hình lên 1600x900
     * Thêm KMp3LibClass khi lên vs2022
+    * Nâng cấp lên C++17 standard (tất cả 16 project files)
 - ⚡ Sử dụng:
     * B1: git clone https://github.com/duccom0123/jx1-vs2022.git
     * B2: mở SwordOnline\Sources\JXAll.sln bằng vs2022
@@ -22,3 +23,7 @@
             * ... vài file liên quan nữa ae tìm theo tagSHOW_MSG_SYNC (https://github.com/duccom0123/jx1-vs2022/commit/a1f54536d17c66b02a2ad8a14e1a09a2dc07205d)
 	* 0.0.2:
         - Sửa lỗi khiến relay bị văng
+    * 0.0.3:
+        - Nâng cấp project lên C++17 standard
+        - Thêm <LanguageStandard>stdcpp17</LanguageStandard> vào tất cả 16 project files
+        - Hỗ trợ các tính năng mới của C++17
