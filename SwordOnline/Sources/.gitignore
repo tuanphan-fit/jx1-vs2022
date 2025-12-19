@@ -1,0 +1,14 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+
+# Build output
+[Bb]in/
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+
+# Other
+*.log
