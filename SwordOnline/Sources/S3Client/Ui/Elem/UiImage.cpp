@@ -58,7 +58,7 @@ int	IR_IsTimePassed(unsigned int uInterval, unsigned int& uLastTimer)
 //获取剩余时间，如果时间已经到了/过了，返回值都为0
 unsigned int IR_GetRemainTime(unsigned int uInterval, unsigned int uLastTimer)
 {
-	register unsigned int uRemain;
+	unsigned int uRemain;
 	if ((uRemain = l_Time - uLastTimer) < uInterval)
 		return (uInterval - uRemain);
 	return 0;

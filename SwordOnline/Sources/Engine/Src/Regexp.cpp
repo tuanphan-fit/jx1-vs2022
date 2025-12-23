@@ -880,7 +880,7 @@ LPTSTR CRegCompilerBase::regatom(int * flagp)
 		// flags |= SIMPLE at the end.
 		{
 			TCHAR *regprev;
-			register TCHAR ch;
+			TCHAR ch;
 
 			regparse--;			/* Look at cur char */
 			ret = regnode(EXACTLY);

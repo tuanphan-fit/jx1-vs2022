@@ -203,7 +203,7 @@ extern "C" ENGINE_API const char *TGetSecondVisibleCharacterThisLine(const char 
 //--------------------------------------------------------------------------
 extern "C" ENGINE_API int TSplitString(const char *pString, int nDesirePos, int bLess)
 {
-    register int nPos = 0;
+    int nPos = 0;
     if (pString)
     {
         nDesirePos -= 2;
@@ -246,7 +246,7 @@ extern "C" ENGINE_API int TSplitEncodedString(const char *pString, int nCount, i
     {
         if (nDesirePos <= nCount)
         {
-            register unsigned char cCharacter;
+            unsigned char cCharacter;
             nDesirePos -= MAX_ENCODED_CTRL_LEN;
             while (nPos < nDesirePos)
             {

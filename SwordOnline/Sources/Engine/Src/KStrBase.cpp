@@ -14,7 +14,7 @@
 ENGINE_API int g_StrLen(LPCSTR lpStr)
 {
 #ifdef WIN32
-	register int nLen;
+	int nLen;
 
 	__asm
 	{
@@ -40,7 +40,7 @@ ENGINE_API int g_StrLen(LPCSTR lpStr)
 ENGINE_API LPSTR g_StrEnd(LPCSTR lpStr)
 {
 #ifdef WIN32
-	register LPSTR lpEnd;
+	LPSTR lpEnd;
 
 	__asm
 	{
@@ -146,7 +146,7 @@ finished:
 //---------------------------------------------------------------------------
 ENGINE_API void g_StrCat(LPSTR lpDest, LPCSTR lpSrc)
 {
-	register LPSTR lpEnd;
+	LPSTR lpEnd;
 
 	lpEnd = g_StrEnd(lpDest);
 	g_StrCpy(lpEnd, lpSrc);
@@ -161,7 +161,7 @@ ENGINE_API void g_StrCat(LPSTR lpDest, LPCSTR lpSrc)
 //---------------------------------------------------------------------------
 ENGINE_API void g_StrCatLen(LPSTR lpDest, LPCSTR lpSrc, int nMaxLen)
 {
-	register LPSTR lpEnd;
+	LPSTR lpEnd;
 
 	lpEnd = g_StrEnd(lpDest);
 	g_StrCpyLen(lpEnd, lpSrc, nMaxLen);
@@ -176,7 +176,7 @@ ENGINE_API void g_StrCatLen(LPSTR lpDest, LPCSTR lpSrc, int nMaxLen)
 //---------------------------------------------------------------------------
 ENGINE_API BOOL g_StrCmp(LPCSTR lpDest, LPCSTR lpSrc)
 {
-	register int nLen1, nLen2;
+	int nLen1, nLen2;
 
 	nLen1 = g_StrLen(lpDest);
 	nLen2 = g_StrLen(lpSrc);
@@ -195,7 +195,7 @@ ENGINE_API BOOL g_StrCmp(LPCSTR lpDest, LPCSTR lpSrc)
 //---------------------------------------------------------------------------
 ENGINE_API BOOL g_StrCmpLen(LPCSTR lpDest, LPCSTR lpSrc, int nMaxLen)
 {
-	register int nLen1, nLen2;
+	int nLen1, nLen2;
 
 	nLen1 = g_StrLen(lpDest);
 	nLen2 = g_StrLen(lpSrc);

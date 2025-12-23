@@ -40,7 +40,7 @@ DWORD KCodecLzo::Compress(
 	
 	while (TRUE)
 	{
-		register PBYTE m_pos;
+		PBYTE m_pos;
 		unsigned m_off;
 		unsigned m_len;
 		unsigned dindex;
@@ -89,7 +89,7 @@ match:
 		dict[dindex] = ip;
 		if (ip - ii > 0)
 		{
-			register unsigned t = ip - ii;
+			unsigned t = ip - ii;
 			
 			if (t <= 3)
 				op[-2] |= (BYTE)t;
@@ -97,7 +97,7 @@ match:
 				*op++ = (BYTE) ( t - 3 );
 			else
 			{
-				register unsigned tt = t - 18;
+				unsigned tt = t - 18;
 				*op++ = 0;
 				while (tt > 255)
 				{
@@ -262,10 +262,10 @@ BOOL KCodecLzo::Encode(TCodeInfo* pCodeInfo)
 //---------------------------------------------------------------------------
 BOOL KCodecLzo::Decode(TCodeInfo* pCodeInfo)
 {
-	register PBYTE op;
-	register PBYTE ip;
-	register DWORD t;
-	register PBYTE m_pos;
+	PBYTE op;
+	PBYTE ip;
+	DWORD t;
+	PBYTE m_pos;
 	
 	op = pCodeInfo->lpData;
 	ip = pCodeInfo->lpPack;
